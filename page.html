@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourabh Yadav | Research Scholar</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --light-color: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--primary-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin: 3rem 0;
+        }
+
+        .research-interests {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .interest-card {
+            position: relative;
+            padding: 1.5rem;
+            border-radius: 5px;
+            color: black; /* Ensure text is readable */
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+            height: 250px; /* Set a fixed height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+        }
+
+        /* Translucent Background Image */
+        .interest-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.25; /* Adjust transparency (0 = fully transparent, 1 = fully visible) */
+            z-index: 0; /* Keep it behind text */
+        }
+
+        /* Assign different images to each card */
+        .interest-card:nth-child(1)::before {
+            background-image: url('reinforcement-learning.jpg');
+        }
+
+        .interest-card:nth-child(2)::before {
+            background-image: url('machine-learning.jpg');
+        }
+
+        .interest-card:nth-child(3)::before {
+            background-image: url('control.png');
+        }
+
+        /* Ensure the text and list remain fully visible */
+        .interest-card * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .interest-card ul {
+            list-style-type: disc; /* Keep bullet points */
+            padding-left: 20px;
+            text-align: left;
+        }
+
+
+        .publications li {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .profile-img {
+            width: 200px;
+            border-radius: 50%;
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Sourabh Yadav</h1>
+        <p>PhD Candidate in AIDAR Lab IIT Kanpur</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am a PhD candidate at IIT Kanpur with interests in Reinforcement Learning, Machine Learning, and Control Systems. Currently working on Large Language Models as part of my PhD in AIDAR Lab. Before this, I completed my master's in Systems & Control from IIT Hyderabad.</p>
+        </section>
+
+        <section id="research" class="section">
+            <h2>Research Interests</h2>
+            <div class="research-interests">
+                <div class="interest-card">
+                    <h3>Reinforcement Learning</h3>
+                    <ul>
+                        <li>Deep RL algorithms</li>
+                        <li>Multi-agent systems</li>
+                    </ul>
+                </div>
+                <div class="interest-card">
+                    <h3>Machine Learning</h3>
+                    <ul>
+                        <li>Deep neural networks</li>
+                        <li>Transfer learning</li>
+                        <li>Large language models</li>
+                    </ul>
+                </div>
+                <div class="interest-card">
+                    <h3>Control Systems</h3>
+                    <ul>
+                        <li>Multivariable Systems</li>
+                        <li>Adaptive Control</li>
+                        <li>Process Control</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Selected Publications</h2>
+            <ul class="publications">
+                <li>
+                    <strong>RL based adaptive PID controller for unstable systems with delay</strong><br>
+                    Sourabh Yadav, Ketan Detroja<br>
+                    <em>International Conference on Machine Learning (ICML), 2023</em><br>
+                    [<a href="#">PDF</a>]
+                </li>
+                <!-- Add more publications -->
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: sourabhy24@iitk.ac.in</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sourabh Yadav. All rights reserved.</
